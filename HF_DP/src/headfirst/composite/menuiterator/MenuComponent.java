@@ -28,7 +28,11 @@ public abstract class MenuComponent {
 	}
 
 	public abstract Iterator createIterator();
- 
+	
+	public List<MenuComponent> getMenuComponent(){
+		return null;
+	}
+	
 	public void print() {
 		throw new UnsupportedOperationException();
 	}

@@ -37,6 +37,12 @@ public class MenuItem extends MenuComponent {
 		return vegetarian;
 	}
 
+	@Override
+	public String toString() {
+		return "MenuItem [name=" + name + ", description=" + description + ", vegetarian=" + vegetarian + ", price="
+				+ price + "]";
+	}
+
 	public Iterator createIterator() {
 		return new NullIterator();
 	}

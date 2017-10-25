@@ -1,6 +1,7 @@
 package headfirst.composite.menuiterator;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.ArrayList;
 
 public class Menu extends MenuComponent {
@@ -25,7 +26,11 @@ public class Menu extends MenuComponent {
 	public MenuComponent getChild(int i) {
 		return (MenuComponent)menuComponents.get(i);
 	}
- 
+	
+	public List<MenuComponent> getMenuComponent(){
+		return menuComponents;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -35,6 +40,11 @@ public class Menu extends MenuComponent {
 	}
 
   
+	@Override
+	public String toString() {
+		return "Menu [menuComponents=" + menuComponents + ", name=" + name + ", description=" + description + "]";
+	}
+
 	public Iterator createIterator() {
 		return new CompositeIterator(menuComponents.iterator());
 	}
